@@ -1,0 +1,1 @@
+var Movie = Backbone.models.extend({});
