@@ -2,15 +2,19 @@
 
 	'use strict';
 
-	var api_key = 'api_key=c6445617d42ba37094ff06ac4923599a';
-	var Configuration = Backbone.Model.extend({
+	var CONFIG = {
+		api_key : 'c6445617d42ba37094ff06ac4923599a',
+		URL_MOVIES : 'http://api.themoviedb.org/3/search/movie'
+	}
+
+	/*var Configuration = Backbone.Model.extend({
 		url: 'http://api.themoviedb.org/3/configuration?&api_key=c6445617d42ba37094ff06ac4923599a',
 		defaults : {
 			baseURL : '',
 			site : '',
 			filePath : ''
 		}
-	});
+	});*/
 
 	var Movie = Backbone.Model.extend({
 		defaults : {
@@ -23,23 +27,28 @@
 	});
 
 	var MovieViewResult = Backbone.View.extend({
-		tagName : 'li',
-		className : 'itemMovie',
 
 		events : {
 			'click .addMovie' : 'selectMovie',
 			'click .viewCard' : 'viewCard'
 		},
 
-		render : function (item){
-			$(this.el).append('<h1>'+this.model.get('title')+'</h1>');
+		initialize : function () {
+			this.templateMVR = Handlebars.compile($('#item-movie-tpl').html());
+		},
+
+		render : function () {
+			console.log(this)
+			$(this.el).append(this.templateMVR(this.model.toJSON()));
 			return this;
 		}
 	});
 
 	var ListMovies = Backbone.Collection.extend({
-		url : 'http://api.themoviedb.org/3/search/movie',
+		url : CONFIG.URL_MOVIES,
+
 		model : Movie,
+
 		parse : function (response) {
 			return response.results;
 		}
@@ -67,7 +76,7 @@
 		searchMovies : function (e) {
 			var that = this;
 
-			this.listMovies.url += '?' + api_key + '&query=' + $(this.el).find('#inputSearch').val();
+			this.listMovies.url += '?api_key=' + CONFIG.api_key + '&query=' + $(this.el).find('#inputSearch').val();
 
 			this.listMovies.fetch({
 				success : function (objectData) {
@@ -89,7 +98,6 @@
 
 				that.listMovies.add(movie);
 			});
-			console.log(this.listMovies.toJSON());
 		},
 
 		appendResult : function (item) {
