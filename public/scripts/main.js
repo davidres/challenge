@@ -38,7 +38,6 @@
 		},
 
 		render : function () {
-			console.log(this)
 			$(this.el).append(this.templateMVR(this.model.toJSON()));
 			return this;
 		}
