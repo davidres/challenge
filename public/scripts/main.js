@@ -7,14 +7,14 @@
 		URL_MOVIES : 'http://api.themoviedb.org/3/search/movie'
 	}
 
-	/*var Configuration = Backbone.Model.extend({
+	var Configuration = Backbone.Model.extend({
 		url: 'http://api.themoviedb.org/3/configuration?&api_key=c6445617d42ba37094ff06ac4923599a',
 		defaults : {
 			baseURL : '',
 			site : '',
 			filePath : ''
 		}
-	});*/
+	});
 
 	var Movie = Backbone.Model.extend({
 		defaults : {
@@ -34,11 +34,11 @@
 		},
 
 		initialize : function () {
-			this.templateMVR = Handlebars.compile($('#item-movie-tpl').html());
+			this.template = Handlebars.compile($('#item-movie-tpl').html());
 		},
 
 		render : function () {
-			$(this.el).append(this.templateMVR(this.model.toJSON()));
+			$(this.el).append(this.template(this.model.toJSON()));
 			return this;
 		}
 	});
@@ -61,14 +61,14 @@
 		},
 
 		initialize : function(){
+			this.template = Handlebars.compile($('#movie-search').html());
 			this.listMovies = new ListMovies();
 			this.listMovies.bind('add', this.appendResult);
 			this.render();
 		},
 
 		render : function () {
-			$(this.el).append('<input id="inputSearch" placeholder="Search movie"/> <input id="search" type="submit"  value="Search"/>');
-			$(this.el).append('<ul></ul>');
+			$(this.el).append(this.template());
 			return this;
 		},
 
@@ -103,10 +103,40 @@
 			var itemMovie = new MovieViewResult({
 				model : item
 			});
-			$('ul',this.el).append(itemMovie.render().el)
+			$('.listMovies',this.el).append(itemMovie.render().el)
 		}
 
 	});
+	
+	var CardView = Backbone.View.extend({
+		el : $('body'),
 
-	var searchView = new SearchView();
+		initialize : function () {
+			this.template = Handlebars.compile($("#card-movie-tpl").html());
+		},
+
+		render : function () {
+			$(this.el).append(this.template(this.model.el));
+		}
+	});
+
+	var APP = Backbone.Router.extend({
+		routes : {
+			'' : 'home',
+			'home': 'home',
+			'search' : 'search',
+			'card' : 'card'
+		},
+
+		home : function () {
+			var searchView = new SearchView();
+		},
+
+
+
+	});
+
+	var router = new APP();
+	Backbone.history.start();
+	Backbone.history.start({pushState: true}) ;
 })();

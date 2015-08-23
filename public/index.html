@@ -5,13 +5,33 @@
 	<title>Helios Challenge</title>
 </head>
 <body>
+
+	<script id="movie-search" type="text/x-handlebars-template">
+		<input id="inputSearch" placeholder="Search Movie"/> <input id="search" type="submit"  value="Search Movie"/>
+		<ul class="listMovies">
+		</ul>
+	</script>
 	<script id="item-movie-tpl" type="text/x-handlebars-template">
 		<li class="itemMovie">
 			<h1>{{title}}</h1>
+			<img src="{{posterPath}}" alt="Poster of {{title}}">
+			<ul class="lt-opts">
+				<li><span class="addMovie">ADD</span></li>
+				<li><span class="viewCard">VIEW CARD</span></li>
+			</ul>
+		</li>
+	</script>
+
+	<script id="card-movie-tpl" type="text/x-handlebars-template">
+		<article class="itemMovie">
+			<span>Back</span>
+			<h1>{{title}}</h1>
+			<img src="{{posterPath}}" alt="Poster of {{title}}">
 			<p>
 			{{overview}}
 			</p>
-		</li>
+			<span class="addMovie">ADD</span>
+		</article>
 	</script>
 
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
