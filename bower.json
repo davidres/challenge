@@ -1,0 +1,30 @@
+{
+  "name": "IDChallenge",
+  "version": "1.0.0",
+  "description": "A introduction test to explore new technologies in Helios project",
+  "main": "main.js, main.css, index.html",
+  "keywords": [
+    "Test",
+    "Challenge",
+    "Helios",
+    "project"
+  ],
+  "authors": [
+    "davperez@prodigious.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Backbone.localStorage": "~1.1.16",
+    "backbone": "~1.2.1",
+    "grunt": "~0.4.5",
+    "handlebars": "~3.0.3",
+    "jquery": "~2.1.4"
+  }
+}
