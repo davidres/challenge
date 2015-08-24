@@ -4,7 +4,8 @@
 
 	var CONFIG = {
 		api_key : 'c6445617d42ba37094ff06ac4923599a',
-		URL_MOVIES : 'http://api.themoviedb.org/3/search/movie'
+		URL_MOVIES : 'http://api.themoviedb.org/3/search/movie',
+		APP_CONTAINER : '.APP-CONTAINER'
 	};
 
 	var eventAggregator = _.extend({}, Backbone.Events);
@@ -49,7 +50,9 @@
 				model : this.model
 			});
 
-			$(this.el).append(cardView.render().el);
+			$(CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
+
+			app.navigate('card');
 		},
 
 		addMovie : function () {
@@ -68,7 +71,7 @@
 	});
 
 	var SearchView = Backbone.View.extend({
-		el : $('body'),
+		el : $(CONFIG.APP_CONTAINER),
 
 		events : {
 			'click #search' : 'searchMovies'
@@ -124,7 +127,7 @@
 	});
 	
 	var CardView = Backbone.View.extend({
-		el : $('body'),
+		el : $(CONFIG.APP_CONTAINER),
 
 		initialize : function () {
 			this.template = Handlebars.compile($("#card-movie-tpl").html());
