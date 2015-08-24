@@ -5,7 +5,9 @@
 	var CONFIG = {
 		api_key : 'c6445617d42ba37094ff06ac4923599a',
 		URL_MOVIES : 'http://api.themoviedb.org/3/search/movie'
-	}
+	};
+
+	var eventAggregator = _.extend({}, Backbone.Events);
 
 	var Configuration = Backbone.Model.extend({
 		url: 'http://api.themoviedb.org/3/configuration?&api_key=c6445617d42ba37094ff06ac4923599a',
@@ -29,7 +31,7 @@
 	var MovieViewResult = Backbone.View.extend({
 
 		events : {
-			'click .addMovie' : 'selectMovie',
+			'click .addMovie' : 'addMovie',
 			'click .viewCard' : 'viewCard'
 		},
 
@@ -40,6 +42,18 @@
 		render : function () {
 			$(this.el).append(this.template(this.model.toJSON()));
 			return this;
+		},
+
+		viewCard : function () {
+			var cardView = new CardView({
+				model : this.model
+			});
+
+			$(this.el).append(cardView.render().el);
+		},
+
+		addMovie : function () {
+			console.log("ADD MV");
 		}
 	});
 
@@ -103,7 +117,8 @@
 			var itemMovie = new MovieViewResult({
 				model : item
 			});
-			$('.listMovies',this.el).append(itemMovie.render().el)
+
+			$('.listMovies',this.el).append(itemMovie.render().el);
 		}
 
 	});
@@ -116,7 +131,8 @@
 		},
 
 		render : function () {
-			$(this.el).append(this.template(this.model.el));
+			$(this.el).append(this.template(this.model.toJSON()));
+			return this;
 		}
 	});
 
@@ -125,18 +141,21 @@
 			'' : 'home',
 			'home': 'home',
 			'search' : 'search',
-			'card' : 'card'
+			'card' : 'viewCard'
 		},
 
 		home : function () {
 			var searchView = new SearchView();
 		},
 
-
+		viewCard : function (item) {
+			var cardView = new CardView({
+				model : item
+			});
+		}
 
 	});
 
-	var router = new APP();
+	var app = new APP();
 	Backbone.history.start();
-	Backbone.history.start({pushState: true}) ;
 })();
