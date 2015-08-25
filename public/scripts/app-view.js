@@ -1,4 +1,6 @@
 (function(APP){ 
+	'use strict';
+	
 	APP.AppView = Backbone.View.extend({
 
 		el : APP.CONFIG.APP_CONTAINER,
@@ -10,16 +12,15 @@
 		},
 
 		render : function () {
-			$(this.el).append(this.template());
+			$(this.el).empty().append(this.template());
 			return this;
 		},
 
 		search : function () {
-			APP.Router.navigate('search', {trigger : false});
+			APP.RouterAPP.navigate('search', {trigger : true});
 		},
 
 		initialize : function () {
-			new APP.Router();
 			this.render();
 		}
 	});

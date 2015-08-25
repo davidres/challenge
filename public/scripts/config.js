@@ -1,3 +1,5 @@
+'use strict';
+
 window.APP = {
 	author : 'davidperez@prodigious.com'
 };

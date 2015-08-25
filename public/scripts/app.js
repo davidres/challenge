@@ -1,6 +1,8 @@
 (function(APP){
 	'use strict';
-	
-	new APP.AppView; 
+
+	APP.RouterAPP = new APP.Router();
+
+	APP.RouterAPP.navigate('home', {trigger : true});
 
 })(APP || {});

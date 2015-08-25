@@ -1,4 +1,6 @@
 (function(APP){
+	'use strict';
+	
 	APP.SearchResults = Backbone.Collection.extend({
 		url : APP.CONFIG.URL_MOVIES,
 

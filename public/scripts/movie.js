@@ -1,4 +1,6 @@
 (function(APP){
+	'use strict';
+	
 	APP.Movie = Backbone.Model.extend({
 		defaults : {
 			title : '', // Movie's name

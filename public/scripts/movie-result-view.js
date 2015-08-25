@@ -1,4 +1,6 @@
 (function(APP){
+	'use strict';
+	
 	APP.MovieResultView = Backbone.View.extend({
 
 		events : {
@@ -22,7 +24,7 @@
 
 			$(APP.CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
 
-			APP.Router.navigate('card', {trigger : true});
+			APP.RouterAPP.navigate('card', {trigger : true});
 		},
 
 		addMovie : function () {

@@ -1,4 +1,6 @@
 (function(APP){
+	'use strict';
+	
 	APP.SearchView = Backbone.View.extend({
 
 		el : APP.CONFIG.APP_CONTAINER,

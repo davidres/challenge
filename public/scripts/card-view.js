@@ -1,4 +1,6 @@
 (function(APP){
+	'use strict';
+	
 	APP.CardView = Backbone.View.extend({
 		el : $(APP.CONFIG.APP_CONTAINER),
 

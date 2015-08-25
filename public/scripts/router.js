@@ -1,16 +1,24 @@
 (function(APP){
-	APP.Router = Backbone.Router.extend({
+	'use strict';
+
+	APP.Router =  Backbone.Router.extend({
 		routes : {
 			'search' : 'searchView',
-			'card' : 'cardView'
+			'card' : 'cardView',
+			'home' : 'homeView',
 		},
 
 		searchView : function () {
-			new APP.SearchView();
+			new APP.SearchView;
 		},
 
 		cardView : function () {
+		},
+
+		homeView : function () {
+			new APP.AppView; 
 		}
 	});
+
 	Backbone.history.start();
 })(APP);
