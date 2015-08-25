@@ -3,9 +3,11 @@
 
 	APP.Router =  Backbone.Router.extend({
 		routes : {
+			'home' : 'homeView',
+			'' : 'homeView',
 			'search' : 'searchView',
 			'card' : 'cardView',
-			'home' : 'homeView',
+			'library' : 'libraryView'
 		},
 
 		searchView : function () {
@@ -17,6 +19,10 @@
 
 		homeView : function () {
 			new APP.AppView; 
+		},
+
+		libraryView : function () {
+			new APP.LibraryView;
 		}
 	});
 

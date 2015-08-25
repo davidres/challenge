@@ -28,7 +28,7 @@
 		},
 
 		addMovie : function () {
-			console.log("ADD MV");
+			APP.selectedMovies.add(this.model);
 		}
 	});
 })(APP);

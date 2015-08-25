@@ -13,13 +13,24 @@
 		<nav>
 			<ul class="lt-it">
 				<li class="btn-search"><a href="#search">Search</a></li>
-				<li><a href="#list">My movies</a></li>
+				<li class="btn-library"><a href="#library">My movies</a></li>
 			</ul>
 		</nav>
 	</script>
 	<script id="movie-search" type="text/x-handlebars-template">
 		<input id="inputSearch" placeholder="Search Movie"/> <input id="search" type="submit"  value="Search Movie"/>
 		<ul class="searchResults">
+		</ul>
+	</script>
+	<script id="movies-library-tpl" type="text/x-handlebars-template">
+		<ul class="moviesList">
+			<li class="itemMovie">
+				<h1>{{title}}</h1>
+				<ul class="lt-opts">
+					<li><span class="removeMovie">REMOVE</span></li>
+					<li><span class="viewCard">VIEW CARD</span></li>
+				</ul>
+			</li>
 		</ul>
 	</script>
 	<script id="item-movie-tpl" type="text/x-handlebars-template">
@@ -54,8 +65,10 @@
 	<script src="scripts/models/movie.js"></script>
 	<script src="scripts/views/card-view.js"></script>
 	<script src="scripts/views/movie-result-view.js"></script>
+	<script src="scripts/views/library-view.js"></script>
 	<script src="scripts/views/search-view.js"></script>
 	<script src="scripts/views/app-view.js"></script>
+	<script src="scripts/collections/selected-movies.js"></script>
 	<script src="scripts/collections/search-results.js"></script>
 	<script src="scripts/app.js"></script>
 </body>

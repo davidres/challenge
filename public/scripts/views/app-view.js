@@ -8,7 +8,8 @@
 		template : Handlebars.compile($('#home-app').html()),
 
 		events : {
-			'click .btn-search' : 'search'
+			'click .btn-search' : 'search',
+			'click .btn-library' : 'libraryView'
 		},
 
 		render : function () {
@@ -20,7 +21,14 @@
 			APP.RouterAPP.navigate('search', {trigger : true});
 		},
 
+		libraryView : function () {
+			APP.RouterAPP.navigate('library', {trigger : true});
+		},
+
 		initialize : function () {
+			if(!APP.selectedMovies){
+				APP.selectedMovies = new APP.SelectedMovies();
+			} 
 			this.render();
 		}
 	});
