@@ -8,9 +8,18 @@
 <div class="APP-CONTAINER">
 
 </div>
+
+	<script id="home-app" type="text/x-handlebars-template">
+		<nav>
+			<ul class="lt-it">
+				<li class="btn-search"><a href="#search">Search</a></li>
+				<li><a href="#list">My movies</a></li>
+			</ul>
+		</nav>
+	</script>
 	<script id="movie-search" type="text/x-handlebars-template">
 		<input id="inputSearch" placeholder="Search Movie"/> <input id="search" type="submit"  value="Search Movie"/>
-		<ul class="listMovies">
+		<ul class="searchResults">
 		</ul>
 	</script>
 	<script id="item-movie-tpl" type="text/x-handlebars-template">
@@ -40,6 +49,13 @@
 	<script src="../bower_components/handlebars/handlebars.min.js"></script>
 	<script src="../bower_components/backbone/backbone-min.js"></script>
 	<script src="../bower_components/Backbone.localStorage/backbone.localStorage-min.js"></script>
-	<script src="scripts/main.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/movie.js"></script>
+	<script src="scripts/movie-result-view.js"></script>
+	<script src="scripts/search-view.js"></script>
+	<script src="scripts/app-view.js"></script>
+	<script src="scripts/search-results.js"></script>
+	<script src="scripts/router.js"></script>
+	<script src="scripts/app.js"></script>
 </body>
 </html>
