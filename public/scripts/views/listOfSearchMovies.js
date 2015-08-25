@@ -1,1 +1,0 @@
-var listMoviesView = Backbone.View.extend({});
