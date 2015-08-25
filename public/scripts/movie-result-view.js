@@ -16,13 +16,13 @@
 		},
 
 		viewCard : function () {
-			var cardView = new CardView({
+			var cardView = new APP.CardView({
 				model : this.model
 			});
 
-			$(CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
+			$(APP.CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
 
-			app.navigate('card');
+			APP.Router.navigate('card', {trigger : true});
 		},
 
 		addMovie : function () {

@@ -48,7 +48,7 @@
 		},
 
 		appendResult : function (item) {
-			var itemMovie = new MovieResultView({
+			var itemMovie = new APP.MovieResultView({
 				model : item
 			});
 

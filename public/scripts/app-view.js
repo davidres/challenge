@@ -15,10 +15,11 @@
 		},
 
 		search : function () {
-			APP.Router.navigate('search', {trigger : true});
+			APP.Router.navigate('search', {trigger : false});
 		},
 
 		initialize : function () {
+			new APP.Router();
 			this.render();
 		}
 	});
