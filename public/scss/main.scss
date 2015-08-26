@@ -4,6 +4,84 @@
 		"_variables.scss",
 		"_fonts.scss",
 		"_mixins.scss",
+		"_functions.scss",
 		"_icon-codes";
 
+body{
+	background: url("../images/my-delicious-library-movie-collection.jpg") repeat center center;
+	background-size: 45%;
+}
+header{
+	@include filter-gradient(#ffffff, #91ad36, vertical);
+	@include background-image(linear-gradient(top, color-opacity($blue-bg-header-1,0.3) 0%, color-opacity($blue-bg-header-1,0.95) 100%));
 
+	text-align: center;
+	font-family: 'dustismo_bold';
+	padding: 40px 0 20px;
+	background-color: rgba(255,255,255,0);
+
+	h1{
+		@include text-shadow(rgba(0,0,0,0.4) 3px 3px 2px);
+
+		color : $white;
+		font-size : $sz-header-tl-1;
+	}
+}
+
+.app-container{
+	background-color : color-opacity($black,0.5);
+	padding : 20px 0;
+	.lt-menu {
+		display: table;
+		margin: 0 auto;
+		font-family: 'dustismoregular';
+		text-align: center;
+
+		a {
+			@include transition(color 200ms linear); 
+
+			color : color-opacity($black, 0.9);
+			text-decoration: none;
+			font-size: 25px;
+		}
+		li {
+			@extend .btn-1;
+
+			display : inline-block;
+			padding: 40px 10px;
+    		width: 200px;
+			vertical-align: middle;
+			margin: 0 10px;
+		}
+		[class*='icon-'] {
+			display: block;
+			font-size: 50px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.searchContainer{
+		display: table;
+		margin: 0 auto;
+		max-width: 500px;
+		font-family: 'dustismoregular';
+
+		input[type = "text"] {
+			@include border-radius(5px);
+			
+			border: none;
+			background-color : $white;
+			font-size: 25px;
+			padding: 5px 10px;
+			margin-right: 10px;
+		}
+
+		input[type = "submit"] {
+			@extend .btn-1;
+
+			border: none;
+			font-size: 25px;
+			padding: 5px 10px;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.btn-1{
+	@include border-radius(10px);
+	@include transition(background-color 200ms linear); 
+
+	cursor: pointer;
+	background-color: $bt-yellow-1;
+
+	&:hover{
+		background-color: $bt-orange-1;
+		a{
+			color : $white;
+		}
+	}
+}

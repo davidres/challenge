@@ -79,22 +79,43 @@ html {
 
 @font-face {
   font-family: 'dustismoregular';
-  src: url("public/fonts/dustismo-webfont.woff") format("woff"), url("public/fonts/dustismo-webfont.ttf") format("truetype");
+  src: url("..//fonts/dustismo-webfont.woff") format("woff"), url("..//fonts/dustismo-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'dustismo_bold';
-  src: url("public/fonts/dustismo_bold-webfont.woff") format("woff"), url("public/fonts/dustismo_bold-webfont.ttf") format("truetype");
+  src: url("..//fonts/dustismo_bold-webfont.woff") format("woff"), url("..//fonts/dustismo_bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'app-movies';
-  src: url("public/fonts/app-movies.ttf?2rxsmh") format("truetype"), url("public/fonts/app-movies.woff?2rxsmh") format("woff");
+  font-family: 'app-icons';
+  src: url("..//fonts/app-icons.ttf?2rxsmh") format("truetype"), url("..//fonts/app-icons.woff?2rxsmh") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+/* line 1, ../scss/_mixins.scss */
+.btn-1, .app-container .lt-menu li, .app-container .searchContainer input[type="submit"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  cursor: pointer;
+  background-color: #FDD907;
+}
+/* line 8, ../scss/_mixins.scss */
+.btn-1:hover, .app-container .lt-menu li:hover, .app-container .searchContainer input[type="submit"]:hover {
+  background-color: #FDA207;
+}
+/* line 10, ../scss/_mixins.scss */
+.btn-1:hover a, .app-container .lt-menu li:hover a, .app-container .searchContainer input[type="submit"]:hover a {
+  color: #FFF;
+}
+
 /* line 1, ../scss/_icon-codes.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'app-icons';
@@ -177,4 +198,93 @@ html {
 /* line 54, ../scss/_icon-codes.scss */
 .icon-wallet:before {
   content: "\e60d";
+}
+
+/* line 10, ../scss/main.scss */
+body {
+  background: url("../images/my-delicious-library-movie-collection.jpg") repeat center center;
+  background-size: 45%;
+}
+
+/* line 14, ../scss/main.scss */
+header {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FF91AD36');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMzk4MCIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDM5ODAiIHN0b3Atb3BhY2l0eT0iMC45NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 57, 128, 0.3)), color-stop(100%, rgba(0, 57, 128, 0.95)));
+  background-image: -moz-linear-gradient(top, rgba(0, 57, 128, 0.3) 0%, rgba(0, 57, 128, 0.95) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 57, 128, 0.3) 0%, rgba(0, 57, 128, 0.95) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 57, 128, 0.3) 0%, rgba(0, 57, 128, 0.95) 100%);
+  text-align: center;
+  font-family: 'dustismo_bold';
+  padding: 40px 0 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+/* line 23, ../scss/main.scss */
+header h1 {
+  text-shadow: rgba(0, 0, 0, 0.4) 3px 3px 2px;
+  color: #FFF;
+  font-size: 60px;
+}
+
+/* line 31, ../scss/main.scss */
+.app-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+/* line 34, ../scss/main.scss */
+.app-container .lt-menu {
+  display: table;
+  margin: 0 auto;
+  font-family: 'dustismoregular';
+  text-align: center;
+}
+/* line 40, ../scss/main.scss */
+.app-container .lt-menu a {
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  font-size: 25px;
+}
+/* line 47, ../scss/main.scss */
+.app-container .lt-menu li {
+  display: inline-block;
+  padding: 40px 10px;
+  width: 200px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+/* line 56, ../scss/main.scss */
+.app-container .lt-menu [class*='icon-'] {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+/* line 63, ../scss/main.scss */
+.app-container .searchContainer {
+  display: table;
+  margin: 0 auto;
+  max-width: 500px;
+  font-family: 'dustismoregular';
+}
+/* line 69, ../scss/main.scss */
+.app-container .searchContainer input[type="text"] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FFF;
+  font-size: 25px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+/* line 79, ../scss/main.scss */
+.app-container .searchContainer input[type="submit"] {
+  border: none;
+  font-size: 25px;
+  padding: 5px 10px;
 }

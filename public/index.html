@@ -6,23 +6,42 @@
 	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<div class="APP-CONTAINER">
+	<!-- Header -->
+	<header>
+		<h1> <span class="icon-video-camera"></span> Movies's Library</h1>
+	</header>
 
-</div>
+	<!-- Main container -->
+	<section class="app-container">
 
+	</section>
+
+	<!-- Main container -->
+	<footer>
+		
+	</footer>
+	
+	<!-- Home Template -->
 	<script id="home-app" type="text/x-handlebars-template">
 		<nav>
-			<ul class="lt-it">
-				<li class="btn-search"><a href="#search">Search</a></li>
-				<li class="btn-library"><a href="#library">My movies</a></li>
+			<ul class="lt-menu">
+				<li class="btn-search"><a href="#search"><span class="icon-search"></span>Search</a></li>
+				<li class="btn-library"><a href="#library"><span class="icon-books"></span>My movies</a></li>
 			</ul>
 		</nav>
 	</script>
+
+	<!-- Movie Search Template -->
 	<script id="movie-search" type="text/x-handlebars-template">
-		<input id="inputSearch" placeholder="Search Movie"/> <input id="search" type="submit"  value="Search Movie"/>
+		<form class="searchContainer"> 
+			<input id="inputSearch" type="text" placeholder="Search Movie"/>
+			<input id="search" type="submit"  value="Search Movie"/>
+		</form>
 		<ul class="searchResults">
 		</ul>
 	</script>
+
+	<!-- Movie library Template -->
 	<script id="movies-library-tpl" type="text/x-handlebars-template">
 		<ul class="moviesList">
 			<li class="itemMovie">
@@ -34,6 +53,8 @@
 			</li>
 		</ul>
 	</script>
+
+	<!-- Movie Item Template -->
 	<script id="item-movie-tpl" type="text/x-handlebars-template">
 		<li class="itemMovie">
 			<h1>{{title}}</h1>
@@ -45,6 +66,7 @@
 		</li>
 	</script>
 
+	<!-- Movie Card Template -->
 	<script id="card-movie-tpl" type="text/x-handlebars-template">
 		<article class="itemMovie">
 			<span>Back</span>
