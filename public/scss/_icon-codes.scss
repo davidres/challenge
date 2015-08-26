@@ -1,0 +1,56 @@
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'app-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-film:before {
+	content: "\e600";
+}
+.icon-video-camera:before {
+	content: "\e601";
+}
+.icon-books:before {
+	content: "\e602";
+}
+.icon-file-text:before {
+	content: "\e603";
+}
+.icon-search:before {
+	content: "\e604";
+}
+.icon-bin2:before {
+	content: "\e605";
+}
+.icon-clipboard:before {
+	content: "\e606";
+}
+.icon-plus:before {
+	content: "\e607";
+}
+.icon-minus:before {
+	content: "\e608";
+}
+.icon-cross:before {
+	content: "\e609";
+}
+.icon-checkmark:before {
+	content: "\e60a";
+}
+.icon-checkbox-checked:before {
+	content: "\e60b";
+}
+.icon-checkbox-unchecked:before {
+	content: "\e60c";
+}
+.icon-wallet:before {
+	content: "\e60d";
+}

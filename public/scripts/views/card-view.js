@@ -16,7 +16,8 @@
 		},
 
 		addMovie : function () {
-			APP.SelectedMovies.add(this.model);	
+			APP.selectedMovies.add(this.model);	
+			this.model.save();
 		}
 	});
 })(APP);

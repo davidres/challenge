@@ -1,0 +1,10 @@
+@include global-reset;
+
+html{
+	@include box-sizing;
+}
+*,
+*:after,
+*:before{
+	box-sizing : inherit;
+}
