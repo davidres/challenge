@@ -270,8 +270,9 @@ header h1 {
   margin: 0 auto;
   max-width: 500px;
   font-family: 'dustismoregular';
+  margin-bottom: 20px;
 }
-/* line 69, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 .app-container .searchContainer input[type="text"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -282,9 +283,39 @@ header h1 {
   padding: 5px 10px;
   margin-right: 10px;
 }
-/* line 79, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .app-container .searchContainer input[type="submit"] {
   border: none;
   font-size: 25px;
   padding: 5px 10px;
+}
+/* line 90, ../scss/main.scss */
+.app-container .searchResults {
+  font-family: 'dustismoregular';
+  font-size: 20px;
+  text-align: center;
+}
+/* line 95, ../scss/main.scss */
+.app-container .searchResults .itemMovie {
+  background-color: #FFF;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 0;
+  width: 30%;
+}
+/* line 102, ../scss/main.scss */
+.app-container .searchResults .lt-opts {
+  width: 100%;
+}
+/* line 104, ../scss/main.scss */
+.app-container .searchResults .lt-opts li {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 48.5%;
+  color: #FFF;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
 }

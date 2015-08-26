@@ -13,7 +13,7 @@
 		},
 
 		render : function () {
-			$(this.el).append(this.template(this.model.toJSON()));
+			$(this.el).html(this.template(this.model.toJSON()));
 			return this;
 		},
 
@@ -28,8 +28,8 @@
 		},
 
 		addMovie : function () {
-			APP.selectedMovies.add(this.model);	
-			this.model.save();
+			/*APP.selectedMovies.add(this.model);	
+			this.model.save();*/
 		}
 	});
 })(APP);

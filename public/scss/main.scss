@@ -65,6 +65,7 @@ header{
 		margin: 0 auto;
 		max-width: 500px;
 		font-family: 'dustismoregular';
+		margin-bottom: 20px;
 
 		input[type = "text"] {
 			@include border-radius(5px);
@@ -82,6 +83,33 @@ header{
 			border: none;
 			font-size: 25px;
 			padding: 5px 10px;
+
+		}
+	}
+
+	.searchResults{
+		font-family : 'dustismoregular';
+		font-size : 20px;
+		text-align: center;
+
+		.itemMovie{
+			background-color: $white;
+			@include border-radius(10px);
+			display: inline-block;
+			padding: 10px 0;
+			width: 30%;
+		}
+		.lt-opts{
+			width: 100%;
+			li{
+				display: inline-block;
+				background-color: color-opacity($black, 0.5);
+				width: 48.5%;
+				color : $white;
+				padding: 5px 0;
+				text-align: center;
+				cursor: pointer;
+			}
 		}
 	}
 }
