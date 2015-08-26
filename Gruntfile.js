@@ -14,25 +14,28 @@ module.exports = function(grunt) {
         }
       }
     },
-    sass: {
-      dist: {
-        files: {
-          'main.css': 'main.scss'
-        }
-      }
+    watch: {
+      styles: {
+        files: ['**/*.scss','**/*.js'],
+        tasks: ['compass:dev', 'jshint']
+      },
+    },
+    jshint: {
+      all: ['Gruntfile.js', 'scripts/**/*.js']
     },
     compass: {                  // Task 
       dist: {                   // Target 
         options: {              // Target options 
           sassDir: 'scss',
-          cssDir: 'css',
+          cssDir: 'styles',
           environment: 'production'
         }
       },
       dev: {                    // Another target 
         options: {
           sassDir: 'scss',
-          cssDir: 'css'
+          cssDir: 'styles',
+          basePath : 'public/'
         }
       }
     }
@@ -42,8 +45,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['connect:server','compass:dev']);
+  grunt.registerTask('default', ['connect:server','watch']);
 
 };
