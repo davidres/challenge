@@ -11,10 +11,14 @@
 			'click #search' : 'searchMovies'
 		},
 
-		initialize : function(){
+		initialize : function(stringMovie){
 			this.searchResults = new APP.SearchResults();
 			this.searchResults.bind('add', this.appendResult);
 			this.render();
+
+			if(stringMovie !== null){
+				this.searchMovies(stringMovie);
+			}
 		},
 
 		render : function () {
@@ -22,16 +26,28 @@
 			return this;
 		},
 
-		searchMovies : function (e) {
-			var that = this;
+		searchMovies : function (stringMovie) {
+			var _stringMovie, that = this;
+			
+			if(typeof stringMovie === 'string'){
+				_stringMovie = stringMovie;
+			} else{
+				_stringMovie = $(this.el).find('#inputSearch').val();
+			}
 
-			this.searchResults.url += '?api_key=' + APP.CONFIG.API_KEY + '&query=' + $(this.el).find('#inputSearch').val();
+			this.searchResults.url += '?api_key=' + APP.CONFIG.API_KEY + '&query=' + _stringMovie;
 
 			this.searchResults.fetch({
 				success : function (objectData) {
 					that.setMoviesList(objectData);
+				},
+
+				error : function (error) {
+
 				}
 			});
+
+			APP.RouterAPP.navigate('search/' + _stringMovie);
 		},
 
 		setMoviesList : function (objectData) {

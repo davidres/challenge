@@ -5,13 +5,14 @@
 		routes : {
 			'home' : 'homeView',
 			'' : 'homeView',
+			'search/:query' : 'searchView',
 			'search' : 'searchView',
 			'card' : 'cardView',
 			'library' : 'libraryView'
 		},
 
-		searchView : function () {
-			new APP.SearchView;
+		searchView : function (query) {
+			new APP.SearchView(query);
 		},
 
 		cardView : function () {
