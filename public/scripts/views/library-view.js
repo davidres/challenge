@@ -19,8 +19,8 @@
 		render : function () {
 			var that = this;
 			$(this.el).empty();
-			_.each(this.library.toJSON(), function(item){
-				$(that.el).append(that.template(item));
+			_.each(this.library.models, function(item){
+				$(that.el).append(that.template(item.toJSON()));
 			});
 		},
 
@@ -28,6 +28,8 @@
 			var cardView = new APP.CardView({
 				model : this.model
 			});
+
+			console.log(this.model);
 
 			$(APP.CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
 
