@@ -16,8 +16,10 @@
 		},
 
 		addMovie : function () {
+			this.model.set({
+				isFavorite : true
+			});
 			APP.selectedMovies.add(this.model);	
-			//this.model.save();
 		}
 	});
 })(APP);

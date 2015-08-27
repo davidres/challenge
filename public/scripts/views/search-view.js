@@ -14,8 +14,8 @@
 
 		initialize : function(stringMovie){
 			this.searchResults = new APP.SearchResults();
-			this.searchResults.bind('add', this.appendResult);
-			this.searchResults.bind('reset', this.clearResult);
+			this.searchResults.on('add', this.appendResult);
+			this.searchResults.on('reset', this.clearResult);
 			this.render();
 
 			if(stringMovie !== null){
@@ -77,6 +77,8 @@
 				});
 
 				that.searchResults.add(movie);
+
+				//movie.on('change:isFavorite', movie.render, movie);
 			});
 		},
 

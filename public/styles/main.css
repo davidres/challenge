@@ -152,71 +152,76 @@ html {
 }
 
 /* line 15, ../scss/_icon-codes.scss */
+.icon-home:before {
+  content: "\e60e";
+}
+
+/* line 19, ../scss/_icon-codes.scss */
 .icon-film:before {
   content: "\e600";
 }
 
-/* line 18, ../scss/_icon-codes.scss */
+/* line 22, ../scss/_icon-codes.scss */
 .icon-video-camera:before {
   content: "\e601";
 }
 
-/* line 21, ../scss/_icon-codes.scss */
+/* line 25, ../scss/_icon-codes.scss */
 .icon-books:before {
   content: "\e602";
 }
 
-/* line 24, ../scss/_icon-codes.scss */
+/* line 28, ../scss/_icon-codes.scss */
 .icon-file-text:before {
   content: "\e603";
 }
 
-/* line 27, ../scss/_icon-codes.scss */
+/* line 31, ../scss/_icon-codes.scss */
 .icon-search:before {
   content: "\e604";
 }
 
-/* line 30, ../scss/_icon-codes.scss */
+/* line 34, ../scss/_icon-codes.scss */
 .icon-bin2:before {
   content: "\e605";
 }
 
-/* line 33, ../scss/_icon-codes.scss */
+/* line 37, ../scss/_icon-codes.scss */
 .icon-clipboard:before {
   content: "\e606";
 }
 
-/* line 36, ../scss/_icon-codes.scss */
+/* line 40, ../scss/_icon-codes.scss */
 .icon-plus:before {
   content: "\e607";
 }
 
-/* line 39, ../scss/_icon-codes.scss */
+/* line 43, ../scss/_icon-codes.scss */
 .icon-minus:before {
   content: "\e608";
 }
 
-/* line 42, ../scss/_icon-codes.scss */
+/* line 46, ../scss/_icon-codes.scss */
 .icon-cross:before {
   content: "\e609";
 }
 
-/* line 45, ../scss/_icon-codes.scss */
+/* line 49, ../scss/_icon-codes.scss */
 .icon-checkmark:before {
   content: "\e60a";
 }
 
-/* line 48, ../scss/_icon-codes.scss */
+/* line 52, ../scss/_icon-codes.scss */
 .icon-checkbox-checked:before {
   content: "\e60b";
 }
 
-/* line 51, ../scss/_icon-codes.scss */
+/* line 55, ../scss/_icon-codes.scss */
 .icon-checkbox-unchecked:before {
   content: "\e60c";
 }
 
-/* line 54, ../scss/_icon-codes.scss */
+/* line 58, ../scss/_icon-codes.scss */
 .icon-wallet:before {
   content: "\e60d";
 }
@@ -250,18 +255,37 @@ header h1 {
 }
 
 /* line 31, ../scss/main.scss */
+.main-menu {
+  padding: 10px;
+  background: #000;
+  color: #FFF;
+  font-family: 'dustismoregular';
+}
+/* line 36, ../scss/main.scss */
+.main-menu a {
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 40, ../scss/main.scss */
+.main-menu li {
+  display: inline-block;
+  margin: 0 2%;
+}
+
+/* line 46, ../scss/main.scss */
 .app-container {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 80px 0;
+  min-height: 100vh;
 }
-/* line 35, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 .app-container .lt-menu {
   display: table;
   margin: 0 auto;
   font-family: 'dustismoregular';
   text-align: center;
 }
-/* line 41, ../scss/main.scss */
+/* line 57, ../scss/main.scss */
 .app-container .lt-menu a {
   -moz-transition: color 200ms linear;
   -o-transition: color 200ms linear;
@@ -271,7 +295,7 @@ header h1 {
   text-decoration: none;
   font-size: 25px;
 }
-/* line 48, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .app-container .lt-menu li {
   display: inline-block;
   padding: 40px 10px;
@@ -279,13 +303,13 @@ header h1 {
   vertical-align: middle;
   margin: 0 10px;
 }
-/* line 57, ../scss/main.scss */
+/* line 73, ../scss/main.scss */
 .app-container .lt-menu [class*='icon-'] {
   display: block;
   font-size: 50px;
   margin-bottom: 10px;
 }
-/* line 64, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .app-container .searchContainer {
   display: table;
   margin: 0 auto;
@@ -293,7 +317,7 @@ header h1 {
   font-family: 'dustismoregular';
   margin-bottom: 20px;
 }
-/* line 71, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 .app-container .searchContainer input[type="text"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -304,26 +328,26 @@ header h1 {
   padding: 5px 10px;
   margin-right: 10px;
 }
-/* line 81, ../scss/main.scss */
+/* line 97, ../scss/main.scss */
 .app-container .searchContainer input[type="submit"] {
   border: none;
   font-size: 25px;
   padding: 5px 10px;
 }
-/* line 91, ../scss/main.scss */
+/* line 107, ../scss/main.scss */
 .app-container .searchResults {
   font-family: 'dustismoregular';
   font-size: 20px;
   text-align: center;
 }
-/* line 96, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 .app-container .searchResults > div {
   display: inline-block;
   width: 30%;
   margin: 0 2% 2% 0;
   vertical-align: middle;
 }
-/* line 103, ../scss/main.scss */
+/* line 119, ../scss/main.scss */
 .app-container .searchResults .itemMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -333,39 +357,39 @@ header h1 {
   padding: 10px 0;
   width: 100%;
 }
-/* line 111, ../scss/main.scss */
+/* line 127, ../scss/main.scss */
 .app-container .searchResults .itemMovie h1,
 .app-container .searchResults .itemMovie img {
   margin-bottom: 20px;
 }
-/* line 116, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 .app-container .searchResults .itemMovie img {
   max-height: 300px;
   display: table;
   margin: 0 auto 20px;
 }
-/* line 122, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 .app-container .searchResults .lt-opts {
   width: 100%;
 }
-/* line 125, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .app-container .searchResults .lt-opts li {
   display: inline-block;
   width: 48.5%;
 }
-/* line 129, ../scss/main.scss */
+/* line 145, ../scss/main.scss */
 .app-container .searchResults .lt-opts span {
   display: block;
   padding: 5px 0;
   width: 100%;
 }
-/* line 140, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 .app-container .libraryContainer {
   font-family: 'dustismoregular';
   font-size: 20px;
   text-align: center;
 }
-/* line 145, ../scss/main.scss */
+/* line 161, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -377,39 +401,39 @@ header h1 {
   margin: 0 2% 2% 0;
   vertical-align: middle;
 }
-/* line 155, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie h1,
 .app-container .libraryContainer .itemMovie img {
   margin-bottom: 20px;
 }
-/* line 160, ../scss/main.scss */
+/* line 176, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie img {
   max-height: 300px;
   display: table;
   margin: 0 auto 20px;
 }
-/* line 166, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie p {
   text-align: left;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 172, ../scss/main.scss */
+/* line 188, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts {
   width: 100%;
 }
-/* line 175, ../scss/main.scss */
+/* line 191, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts li {
   display: inline-block;
   width: 48.5%;
 }
-/* line 179, ../scss/main.scss */
+/* line 195, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts span {
   display: block;
   padding: 5px 0;
   width: 100%;
 }
-/* line 190, ../scss/main.scss */
+/* line 206, ../scss/main.scss */
 .app-container .cardMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -431,23 +455,23 @@ header h1 {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 201, ../scss/main.scss */
+/* line 217, ../scss/main.scss */
 .app-container .cardMovie .addMovie {
   padding: 0 10px;
 }
-/* line 206, ../scss/main.scss */
+/* line 222, ../scss/main.scss */
 .app-container .cardMovie h1 {
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 211, ../scss/main.scss */
+/* line 227, ../scss/main.scss */
 .app-container .cardMovie img {
   max-width: 70%;
   float: left;
   margin-right: 10px;
 }
-/* line 216, ../scss/main.scss */
+/* line 232, ../scss/main.scss */
 .app-container .cardMovie p {
   font-size: 14px;
   margin-bottom: 20px;

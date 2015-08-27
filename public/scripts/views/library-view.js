@@ -33,7 +33,6 @@
 		},
 
 		removeMovie : function () {
-			console.log(this.model);
 			APP.selectedMovies.remove(this.model);
 		}
 	});
