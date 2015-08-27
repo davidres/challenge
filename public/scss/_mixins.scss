@@ -12,3 +12,20 @@
 		}
 	}
 }
+
+.btn-2{
+	@include transition(background-color 200ms linear); 
+
+	background-color: color-opacity($black, 0.5);
+	cursor: pointer;
+	color : $white;
+	background-color: color-opacity($black, 0.5);
+	text-align: center;
+
+	&:hover{
+		background-color: color-opacity($black, 0.9);
+		a{
+			color : $white;
+		}
+	}
+}

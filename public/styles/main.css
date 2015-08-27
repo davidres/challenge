@@ -1,4 +1,46 @@
-/* line 5, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 1, ../scss/_mixins.scss */
+.btn-1, .app-container .lt-menu li, .app-container .searchContainer input[type="submit"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  cursor: pointer;
+  background-color: #FDD907;
+}
+/* line 8, ../scss/_mixins.scss */
+.btn-1:hover, .app-container .lt-menu li:hover, .app-container .searchContainer input[type="submit"]:hover {
+  background-color: #FDA207;
+}
+/* line 10, ../scss/_mixins.scss */
+.btn-1:hover a, .app-container .lt-menu li:hover a, .app-container .searchContainer input[type="submit"]:hover a {
+  color: #FFF;
+}
+
+/* line 16, ../scss/_mixins.scss */
+.btn-2, .app-container .searchResults .lt-opts li, .app-container .cardMovie .addMovie {
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+/* line 25, ../scss/_mixins.scss */
+.btn-2:hover, .app-container .searchResults .lt-opts li:hover, .app-container .cardMovie .addMovie:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+/* line 27, ../scss/_mixins.scss */
+.btn-2:hover a, .app-container .searchResults .lt-opts li:hover a, .app-container .cardMovie .addMovie:hover a {
+  color: #FFF;
+}
+
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +62,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../.rbenv/versions/2.0.0-p645/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -95,27 +137,6 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* line 1, ../scss/_mixins.scss */
-.btn-1, .app-container .lt-menu li, .app-container .searchContainer input[type="submit"] {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-transition: background-color 200ms linear;
-  -o-transition: background-color 200ms linear;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-  cursor: pointer;
-  background-color: #FDD907;
-}
-/* line 8, ../scss/_mixins.scss */
-.btn-1:hover, .app-container .lt-menu li:hover, .app-container .searchContainer input[type="submit"]:hover {
-  background-color: #FDA207;
-}
-/* line 10, ../scss/_mixins.scss */
-.btn-1:hover a, .app-container .lt-menu li:hover a, .app-container .searchContainer input[type="submit"]:hover a {
-  color: #FFF;
-}
-
 /* line 1, ../scss/_icon-codes.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'app-icons';
@@ -231,16 +252,16 @@ header h1 {
 /* line 31, ../scss/main.scss */
 .app-container {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 0;
+  padding: 80px 0;
 }
-/* line 34, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 .app-container .lt-menu {
   display: table;
   margin: 0 auto;
   font-family: 'dustismoregular';
   text-align: center;
 }
-/* line 40, ../scss/main.scss */
+/* line 41, ../scss/main.scss */
 .app-container .lt-menu a {
   -moz-transition: color 200ms linear;
   -o-transition: color 200ms linear;
@@ -250,7 +271,7 @@ header h1 {
   text-decoration: none;
   font-size: 25px;
 }
-/* line 47, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 .app-container .lt-menu li {
   display: inline-block;
   padding: 40px 10px;
@@ -258,13 +279,13 @@ header h1 {
   vertical-align: middle;
   margin: 0 10px;
 }
-/* line 56, ../scss/main.scss */
+/* line 57, ../scss/main.scss */
 .app-container .lt-menu [class*='icon-'] {
   display: block;
   font-size: 50px;
   margin-bottom: 10px;
 }
-/* line 63, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .app-container .searchContainer {
   display: table;
   margin: 0 auto;
@@ -272,7 +293,7 @@ header h1 {
   font-family: 'dustismoregular';
   margin-bottom: 20px;
 }
-/* line 70, ../scss/main.scss */
+/* line 71, ../scss/main.scss */
 .app-container .searchContainer input[type="text"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -283,39 +304,82 @@ header h1 {
   padding: 5px 10px;
   margin-right: 10px;
 }
-/* line 80, ../scss/main.scss */
+/* line 81, ../scss/main.scss */
 .app-container .searchContainer input[type="submit"] {
   border: none;
   font-size: 25px;
   padding: 5px 10px;
 }
-/* line 90, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 .app-container .searchResults {
   font-family: 'dustismoregular';
   font-size: 20px;
   text-align: center;
 }
-/* line 95, ../scss/main.scss */
+/* line 96, ../scss/main.scss */
 .app-container .searchResults .itemMovie {
-  background-color: #FFF;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  background-color: #FFF;
   display: inline-block;
   padding: 10px 0;
   width: 30%;
 }
-/* line 102, ../scss/main.scss */
+/* line 104, ../scss/main.scss */
+.app-container .searchResults .itemMovie h1 {
+  margin-bottom: 20px;
+}
+/* line 108, ../scss/main.scss */
 .app-container .searchResults .lt-opts {
   width: 100%;
 }
-/* line 104, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 .app-container .searchResults .lt-opts li {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 48.5%;
-  color: #FFF;
   padding: 5px 0;
+}
+/* line 121, ../scss/main.scss */
+.app-container .cardMovie {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  *zoom: 1;
+  font-family: 'dustismoregular';
+  font-size: 20px;
+  background-color: #FFF;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.app-container .cardMovie:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 132, ../scss/main.scss */
+.app-container .cardMovie .addMovie {
+  padding: 0 10px;
+}
+/* line 137, ../scss/main.scss */
+.app-container .cardMovie h1 {
+  font-size: 25px;
   text-align: center;
-  cursor: pointer;
+  margin-bottom: 20px;
+}
+/* line 142, ../scss/main.scss */
+.app-container .cardMovie img {
+  max-width: 70%;
+  float: left;
+  margin-right: 10px;
+}
+/* line 147, ../scss/main.scss */
+.app-container .cardMovie p {
+  font-size: 14px;
+  margin-bottom: 10px;
 }

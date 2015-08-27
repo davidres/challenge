@@ -3,16 +3,20 @@
 	
 	APP.MovieResultView = Backbone.View.extend({
 
+		template : Handlebars.compile($('#item-movie-tpl').html()),
+
 		events : {
 			'click .addMovie' : 'addMovie',
 			'click .viewCard' : 'viewCard'
 		},
 
 		initialize : function () {
-			this.template = Handlebars.compile($('#item-movie-tpl').html());
 		},
 
 		render : function () {
+			this.model.set({
+				'posterPath' : APP.CONFIG.PATH_IMAGES + this.model.get('posterPath')
+			});
 			$(this.el).html(this.template(this.model.toJSON()));
 			return this;
 		},

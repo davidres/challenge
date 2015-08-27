@@ -14,6 +14,7 @@
 		initialize : function(stringMovie){
 			this.searchResults = new APP.SearchResults();
 			this.searchResults.bind('add', this.appendResult);
+			this.searchResults.bind('reset', this.clearResult);
 			this.render();
 
 			if(stringMovie !== null){
@@ -54,6 +55,8 @@
 			var results = objectData.toJSON(),
 			that = this;
 
+			that.searchResults.reset();
+
 			_.each(results, function(val){
 				var movie = new APP.Movie({
 					title : val.title,
@@ -71,6 +74,10 @@
 			});
 
 			$('.searchResults',this.el).append(itemMovie.render().el);
+		},
+
+		clearResult : function (item) {
+			$('.searchResults',this.el).empty();
 		}
 
 	});
