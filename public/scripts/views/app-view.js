@@ -26,8 +26,6 @@
 		},
 
 		initialize : function () {
-			APP.selectedMovies = new APP.SelectedMovies();
-			APP.selectedMovies.fetch();
 			this.render();
 		}
 	});

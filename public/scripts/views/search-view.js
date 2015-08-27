@@ -20,6 +20,10 @@
 			if(stringMovie !== null){
 				this.searchMovies(stringMovie);
 			}
+
+			if(APP.selectedMovies === undefined){
+				APP.selectedMovies = new APP.SelectedMovies();
+			}
 		},
 
 		render : function () {

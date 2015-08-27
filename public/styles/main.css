@@ -20,7 +20,7 @@
 }
 
 /* line 16, ../scss/_mixins.scss */
-.btn-2, .app-container .searchResults .lt-opts li, .app-container .cardMovie .addMovie {
+.btn-2, .app-container .searchResults .lt-opts span, .app-container .cardMovie .addMovie {
   -moz-transition: background-color 200ms linear;
   -o-transition: background-color 200ms linear;
   -webkit-transition: background-color 200ms linear;
@@ -32,11 +32,11 @@
   text-align: center;
 }
 /* line 25, ../scss/_mixins.scss */
-.btn-2:hover, .app-container .searchResults .lt-opts li:hover, .app-container .cardMovie .addMovie:hover {
+.btn-2:hover, .app-container .searchResults .lt-opts span:hover, .app-container .cardMovie .addMovie:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 /* line 27, ../scss/_mixins.scss */
-.btn-2:hover a, .app-container .searchResults .lt-opts li:hover a, .app-container .cardMovie .addMovie:hover a {
+.btn-2:hover a, .app-container .searchResults .lt-opts span:hover a, .app-container .cardMovie .addMovie:hover a {
   color: #FFF;
 }
 
@@ -338,9 +338,14 @@ header h1 {
 .app-container .searchResults .lt-opts li {
   display: inline-block;
   width: 48.5%;
-  padding: 5px 0;
 }
-/* line 121, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
+.app-container .searchResults .lt-opts span {
+  display: block;
+  padding: 5px 0;
+  width: 100%;
+}
+/* line 126, ../scss/main.scss */
 .app-container .cardMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -362,24 +367,24 @@ header h1 {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 132, ../scss/main.scss */
+/* line 137, ../scss/main.scss */
 .app-container .cardMovie .addMovie {
   padding: 0 10px;
 }
-/* line 137, ../scss/main.scss */
+/* line 142, ../scss/main.scss */
 .app-container .cardMovie h1 {
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 142, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 .app-container .cardMovie img {
   max-width: 70%;
   float: left;
   margin-right: 10px;
 }
-/* line 147, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 .app-container .cardMovie p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
