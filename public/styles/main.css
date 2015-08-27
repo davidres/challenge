@@ -20,7 +20,7 @@
 }
 
 /* line 16, ../scss/_mixins.scss */
-.btn-2, .app-container .searchResults .lt-opts span, .app-container .cardMovie .addMovie {
+.btn-2, .app-container .searchResults .lt-opts span, .app-container .libraryContainer .lt-opts span, .app-container .cardMovie .addMovie {
   -moz-transition: background-color 200ms linear;
   -o-transition: background-color 200ms linear;
   -webkit-transition: background-color 200ms linear;
@@ -32,11 +32,11 @@
   text-align: center;
 }
 /* line 25, ../scss/_mixins.scss */
-.btn-2:hover, .app-container .searchResults .lt-opts span:hover, .app-container .cardMovie .addMovie:hover {
+.btn-2:hover, .app-container .searchResults .lt-opts span:hover, .app-container .libraryContainer .lt-opts span:hover, .app-container .cardMovie .addMovie:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 /* line 27, ../scss/_mixins.scss */
-.btn-2:hover a, .app-container .searchResults .lt-opts span:hover a, .app-container .cardMovie .addMovie:hover a {
+.btn-2:hover a, .app-container .searchResults .lt-opts span:hover a, .app-container .libraryContainer .lt-opts span:hover a, .app-container .cardMovie .addMovie:hover a {
   color: #FFF;
 }
 
@@ -360,6 +360,56 @@ header h1 {
   width: 100%;
 }
 /* line 140, ../scss/main.scss */
+.app-container .libraryContainer {
+  font-family: 'dustismoregular';
+  font-size: 20px;
+  text-align: center;
+}
+/* line 145, ../scss/main.scss */
+.app-container .libraryContainer .itemMovie {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFF;
+  display: inline-block;
+  padding: 10px 5px;
+  width: 30%;
+  margin: 0 2% 2% 0;
+  vertical-align: middle;
+}
+/* line 155, ../scss/main.scss */
+.app-container .libraryContainer .itemMovie h1,
+.app-container .libraryContainer .itemMovie img {
+  margin-bottom: 20px;
+}
+/* line 160, ../scss/main.scss */
+.app-container .libraryContainer .itemMovie img {
+  max-height: 300px;
+  display: table;
+  margin: 0 auto 20px;
+}
+/* line 166, ../scss/main.scss */
+.app-container .libraryContainer .itemMovie p {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+/* line 172, ../scss/main.scss */
+.app-container .libraryContainer .lt-opts {
+  width: 100%;
+}
+/* line 175, ../scss/main.scss */
+.app-container .libraryContainer .lt-opts li {
+  display: inline-block;
+  width: 48.5%;
+}
+/* line 179, ../scss/main.scss */
+.app-container .libraryContainer .lt-opts span {
+  display: block;
+  padding: 5px 0;
+  width: 100%;
+}
+/* line 190, ../scss/main.scss */
 .app-container .cardMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -381,23 +431,23 @@ header h1 {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 151, ../scss/main.scss */
+/* line 201, ../scss/main.scss */
 .app-container .cardMovie .addMovie {
   padding: 0 10px;
 }
-/* line 156, ../scss/main.scss */
+/* line 206, ../scss/main.scss */
 .app-container .cardMovie h1 {
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 161, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .app-container .cardMovie img {
   max-width: 70%;
   float: left;
   margin-right: 10px;
 }
-/* line 166, ../scss/main.scss */
+/* line 216, ../scss/main.scss */
 .app-container .cardMovie p {
   font-size: 14px;
   margin-bottom: 20px;

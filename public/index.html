@@ -43,13 +43,21 @@
 
 	<!-- Movie library Template -->
 	<script id="movies-library-tpl" type="text/x-handlebars-template">
+		<section class="libraryContainer">
+			{{#each this}}
 			<article class="itemMovie">
 				<h1>{{title}}</h1>
+				<img src="{{posterPath}}" alt="Poster of {{title}}">
+				<p>
+				{{overview}}
+				</p>
 				<ul class="lt-opts">
 					<li><span class="removeMovie">REMOVE</span></li>
 					<li><span class="viewCard">VIEW CARD</span></li>
 				</ul>
 			</article>
+			{{/each}}
+		</section>
 	</script>
 
 	<!-- Movie Item Template -->

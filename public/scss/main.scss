@@ -137,6 +137,56 @@ header{
 		}
 	}
 
+	.libraryContainer{
+		font-family : 'dustismoregular';
+		font-size : 20px;
+		text-align: center;
+
+		.itemMovie{
+			@include border-radius(10px);
+
+			background-color: $white;
+			display: inline-block;
+			padding: 10px 5px;
+			width: 30%;
+			margin: 0 2% 2% 0;
+			vertical-align: middle;
+
+			h1,
+			img{
+				margin-bottom: 20px;
+			}
+
+			img{
+				max-height: 300px;
+				display: table;
+				margin: 0 auto 20px;
+			}
+
+			p{
+				text-align: left;
+				margin-bottom: 20px;
+				font-size : 14px;
+			}
+		}
+		.lt-opts{
+			width: 100%;
+
+			li{
+				display: inline-block;
+				width: 48.5%;
+			}
+			span{
+				@extend .btn-2;
+				
+				display: block;
+				padding: 5px 0;
+				width: 100%;
+			}
+				
+		}
+	}
+
 	.cardMovie{
 		@include border-radius(10px);
 		@include legacy-pie-clearfix;

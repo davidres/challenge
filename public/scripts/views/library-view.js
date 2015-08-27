@@ -12,16 +12,14 @@
 		},
 
 		initialize : function () {
-			console.log(this.collection);
 			this.render();
 		},
 
 		render : function () {
 			var that = this;
+
 			$(this.el).empty();
-			this.collection.each(function(item){
-				$(that.el).append(that.template(item.toJSON()));
-			});
+			$(that.el).append(that.template(this.collection.toJSON()));
 		},
 
 		viewCard : function () {
@@ -29,15 +27,14 @@
 				model : this.model
 			});
 
-			console.log(this.model);
-
 			$(APP.CONFIG.APP_CONTAINER).empty().append(cardView.render().el);
 
 			APP.RouterAPP.navigate('card', {trigger : true});
 		},
 
 		removeMovie : function () {
-			APP.selectedMovies.remove(this.model);	
+			console.log(this.model);
+			APP.selectedMovies.remove(this.model);
 		}
 	});
 })(APP);
