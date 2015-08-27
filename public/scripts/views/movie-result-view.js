@@ -1,7 +1,7 @@
 (function(APP){
 	'use strict';
 	
-	APP.MovieResultView = Backbone.View.extend({
+	APP.MovieResultView = Backbone.View.extend( {
 
 		template : Handlebars.compile($('#item-movie-tpl').html()),
 
@@ -17,7 +17,9 @@
 			this.model.set({
 				'posterPath' : APP.CONFIG.PATH_IMAGES + this.model.get('posterPath')
 			});
+
 			$(this.el).html(this.template(this.model.toJSON()));
+			
 			return this;
 		},
 

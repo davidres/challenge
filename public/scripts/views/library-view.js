@@ -1,7 +1,7 @@
 (function(APP){
 	'use strict';
 
-	APP.LibraryView = Backbone.View.extend({
+	APP.LibraryView = Backbone.View.extend( {
 		el : APP.CONFIG.APP_CONTAINER,
 
 		template : Handlebars.compile($('#movies-library-tpl').html()),

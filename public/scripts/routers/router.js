@@ -1,7 +1,7 @@
 (function(APP){
 	'use strict';
 
-	APP.Router =  Backbone.Router.extend({
+	APP.Router =  Backbone.Router.extend( {
 		routes : {
 			'home' : 'homeView',
 			'' : 'homeView',

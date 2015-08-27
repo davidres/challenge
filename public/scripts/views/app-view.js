@@ -1,7 +1,7 @@
 (function(APP){ 
 	'use strict';
 	
-	APP.AppView = Backbone.View.extend({
+	APP.AppView = Backbone.View.extend( {
 
 		el : APP.CONFIG.APP_CONTAINER,
 

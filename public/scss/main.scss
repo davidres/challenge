@@ -7,14 +7,13 @@
 		"_fonts.scss",
 		"_icon-codes";
 
-body{
+body {
 	background: url("../images/my-delicious-library-movie-collection.jpg") repeat center center;
 	background-size: 45%;
 }
-header{
+header {
 	@include filter-gradient(#ffffff, #91ad36, vertical);
 	@include background-image(linear-gradient(top, color-opacity($blue-bg-header-1,0.3) 0%, color-opacity($blue-bg-header-1,0.95) 100%));
-
 	text-align: center;
 	font-family: 'dustismo_bold';
 	padding: 40px 0 20px;
@@ -28,22 +27,23 @@ header{
 	}
 }
 
-.main-menu{
+.main-menu {
 	padding: 10px;
 	background: $black;
 	color: $white;
 	font-family: 'dustismoregular';
-	a{
+
+	a {
 		color: $white;
 		text-decoration: none;
 	}
-	li{
+	li {
 		display: inline-block;
 		margin: 0 2%;
 	}
 }
 
-.app-container{
+.app-container {
 	background-color : color-opacity($black,0.5);
 	padding : 80px 0;
 	min-height: 100vh;
@@ -53,6 +53,12 @@ header{
 		margin: 0 auto;
 		font-family: 'dustismoregular';
 		text-align: center;
+
+		[class*='icon-'] {
+			display: block;
+			font-size: 50px;
+			margin-bottom: 10px;
+		}
 
 		a {
 			@include transition(color 200ms linear); 
@@ -70,14 +76,10 @@ header{
 			vertical-align: middle;
 			margin: 0 10px;
 		}
-		[class*='icon-'] {
-			display: block;
-			font-size: 50px;
-			margin-bottom: 10px;
-		}
+		
 	}
 
-	.searchContainer{
+	.searchContainer {
 		display: table;
 		margin: 0 auto;
 		max-width: 500px;
@@ -116,7 +118,7 @@ header{
 			vertical-align: middle;
 		}
 
-		.itemMovie{
+		.itemMovie {
 			@include border-radius(10px);
 
 			background-color: $white;
@@ -125,24 +127,24 @@ header{
 			width: 100%;
 
 			h1,
-			img{
+			img {
 				margin-bottom: 20px;
 			}
 
-			img{
+			img {
 				max-height: 300px;
 				display: table;
 				margin: 0 auto 20px;
 			}
 		}
-		.lt-opts{
+		.lt-opts {
 			width: 100%;
 
-			li{
+			li {
 				display: inline-block;
 				width: 48.5%;
 			}
-			span{
+			span {
 				@extend .btn-2;
 				
 				display: block;
@@ -153,12 +155,12 @@ header{
 		}
 	}
 
-	.libraryContainer{
+	.libraryContainer {
 		font-family : 'dustismoregular';
 		font-size : 20px;
 		text-align: center;
 
-		.itemMovie{
+		.itemMovie {
 			@include border-radius(10px);
 
 			background-color: $white;
@@ -169,26 +171,26 @@ header{
 			vertical-align: middle;
 
 			h1,
-			img{
+			img {
 				margin-bottom: 20px;
 			}
 
-			img{
+			img {
 				max-height: 300px;
 				display: table;
 				margin: 0 auto 20px;
 			}
 
-			p{
+			p {
 				text-align: left;
 				margin-bottom: 20px;
 				font-size : 14px;
 			}
 		}
-		.lt-opts{
+		.lt-opts {
 			width: 100%;
 
-			li{
+			li {
 				display: inline-block;
 				width: 48.5%;
 			}
@@ -214,7 +216,7 @@ header{
 		margin: 0 auto;
 		padding: 10px;
 
-		.addMovie{
+		.addMovie {
 			@extend .btn-2;
 			padding: 0 10px;
 		}

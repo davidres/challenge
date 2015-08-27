@@ -16,13 +16,14 @@
 			this.searchResults = new APP.SearchResults();
 			this.searchResults.on('add', this.appendResult);
 			this.searchResults.on('reset', this.clearResult);
+
 			this.render();
 
 			if(stringMovie !== null){
 				this.searchMovies(stringMovie);
 			}
 
-			if(APP.selectedMovies === undefined){
+			if(!APP.selectedMovies){
 				APP.selectedMovies = new APP.SelectedMovies();
 			}
 		},
@@ -77,8 +78,8 @@
 				});
 
 				that.searchResults.add(movie);
-
 				//movie.on('change:isFavorite', movie.render, movie);
+
 			});
 		},
 

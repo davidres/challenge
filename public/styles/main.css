@@ -247,14 +247,14 @@ header {
   padding: 40px 0 20px;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 23, ../scss/main.scss */
+/* line 22, ../scss/main.scss */
 header h1 {
   text-shadow: rgba(0, 0, 0, 0.4) 3px 3px 2px;
   color: #FFF;
   font-size: 60px;
 }
 
-/* line 31, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 .main-menu {
   padding: 10px;
   background: #000;
@@ -286,6 +286,12 @@ header h1 {
   text-align: center;
 }
 /* line 57, ../scss/main.scss */
+.app-container .lt-menu [class*='icon-'] {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+/* line 63, ../scss/main.scss */
 .app-container .lt-menu a {
   -moz-transition: color 200ms linear;
   -o-transition: color 200ms linear;
@@ -295,7 +301,7 @@ header h1 {
   text-decoration: none;
   font-size: 25px;
 }
-/* line 64, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 .app-container .lt-menu li {
   display: inline-block;
   padding: 40px 10px;
@@ -303,13 +309,7 @@ header h1 {
   vertical-align: middle;
   margin: 0 10px;
 }
-/* line 73, ../scss/main.scss */
-.app-container .lt-menu [class*='icon-'] {
-  display: block;
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-/* line 80, ../scss/main.scss */
+/* line 82, ../scss/main.scss */
 .app-container .searchContainer {
   display: table;
   margin: 0 auto;
@@ -317,7 +317,7 @@ header h1 {
   font-family: 'dustismoregular';
   margin-bottom: 20px;
 }
-/* line 87, ../scss/main.scss */
+/* line 89, ../scss/main.scss */
 .app-container .searchContainer input[type="text"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -328,26 +328,26 @@ header h1 {
   padding: 5px 10px;
   margin-right: 10px;
 }
-/* line 97, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 .app-container .searchContainer input[type="submit"] {
   border: none;
   font-size: 25px;
   padding: 5px 10px;
 }
-/* line 107, ../scss/main.scss */
+/* line 109, ../scss/main.scss */
 .app-container .searchResults {
   font-family: 'dustismoregular';
   font-size: 20px;
   text-align: center;
 }
-/* line 112, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 .app-container .searchResults > div {
   display: inline-block;
   width: 30%;
   margin: 0 2% 2% 0;
   vertical-align: middle;
 }
-/* line 119, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 .app-container .searchResults .itemMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -357,39 +357,39 @@ header h1 {
   padding: 10px 0;
   width: 100%;
 }
-/* line 127, ../scss/main.scss */
+/* line 129, ../scss/main.scss */
 .app-container .searchResults .itemMovie h1,
 .app-container .searchResults .itemMovie img {
   margin-bottom: 20px;
 }
-/* line 132, ../scss/main.scss */
+/* line 134, ../scss/main.scss */
 .app-container .searchResults .itemMovie img {
   max-height: 300px;
   display: table;
   margin: 0 auto 20px;
 }
-/* line 138, ../scss/main.scss */
+/* line 140, ../scss/main.scss */
 .app-container .searchResults .lt-opts {
   width: 100%;
 }
-/* line 141, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 .app-container .searchResults .lt-opts li {
   display: inline-block;
   width: 48.5%;
 }
-/* line 145, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 .app-container .searchResults .lt-opts span {
   display: block;
   padding: 5px 0;
   width: 100%;
 }
-/* line 156, ../scss/main.scss */
+/* line 158, ../scss/main.scss */
 .app-container .libraryContainer {
   font-family: 'dustismoregular';
   font-size: 20px;
   text-align: center;
 }
-/* line 161, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -401,39 +401,39 @@ header h1 {
   margin: 0 2% 2% 0;
   vertical-align: middle;
 }
-/* line 171, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie h1,
 .app-container .libraryContainer .itemMovie img {
   margin-bottom: 20px;
 }
-/* line 176, ../scss/main.scss */
+/* line 178, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie img {
   max-height: 300px;
   display: table;
   margin: 0 auto 20px;
 }
-/* line 182, ../scss/main.scss */
+/* line 184, ../scss/main.scss */
 .app-container .libraryContainer .itemMovie p {
   text-align: left;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 188, ../scss/main.scss */
+/* line 190, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts {
   width: 100%;
 }
-/* line 191, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts li {
   display: inline-block;
   width: 48.5%;
 }
-/* line 195, ../scss/main.scss */
+/* line 197, ../scss/main.scss */
 .app-container .libraryContainer .lt-opts span {
   display: block;
   padding: 5px 0;
   width: 100%;
 }
-/* line 206, ../scss/main.scss */
+/* line 208, ../scss/main.scss */
 .app-container .cardMovie {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -455,23 +455,23 @@ header h1 {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 217, ../scss/main.scss */
+/* line 219, ../scss/main.scss */
 .app-container .cardMovie .addMovie {
   padding: 0 10px;
 }
-/* line 222, ../scss/main.scss */
+/* line 224, ../scss/main.scss */
 .app-container .cardMovie h1 {
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 227, ../scss/main.scss */
+/* line 229, ../scss/main.scss */
 .app-container .cardMovie img {
   max-width: 70%;
   float: left;
   margin-right: 10px;
 }
-/* line 232, ../scss/main.scss */
+/* line 234, ../scss/main.scss */
 .app-container .cardMovie p {
   font-size: 14px;
   margin-bottom: 20px;
