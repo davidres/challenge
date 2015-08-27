@@ -8,7 +8,8 @@
 		template : Handlebars.compile($('#movie-search').html()),
 
 		events : {
-			'click #search' : 'searchMovies'
+			'click #search' : 'searchMovies',
+			'keydown': 'keyAction'
 		},
 
 		initialize : function(stringMovie){
@@ -30,6 +31,13 @@
 			$(this.el).empty().append(this.template());
 			return this;
 		},
+
+		keyAction: function(e) {
+	        var code = e.keyCode || e.which;
+	        if(code ==  13) { 
+	            this.searchMovies();
+	        }
+	    },
 
 		searchMovies : function (stringMovie) {
 			var _stringMovie, that = this;

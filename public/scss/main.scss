@@ -93,16 +93,30 @@ header{
 		font-size : 20px;
 		text-align: center;
 
+		>div {
+			display: inline-block;
+			width: 30%;
+			margin: 0 2% 2% 0;
+			vertical-align: middle;
+		}
+
 		.itemMovie{
 			@include border-radius(10px);
 
 			background-color: $white;
 			display: inline-block;
 			padding: 10px 0;
-			width: 30%;
+			width: 100%;
 
-			h1{
+			h1,
+			img{
 				margin-bottom: 20px;
+			}
+
+			img{
+				max-height: 300px;
+				display: table;
+				margin: 0 auto 20px;
 			}
 		}
 		.lt-opts{

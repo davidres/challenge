@@ -12,14 +12,14 @@
 		},
 
 		initialize : function () {
-			this.library = APP.selectedMovies;
+			console.log(this.collection);
 			this.render();
 		},
 
 		render : function () {
 			var that = this;
 			$(this.el).empty();
-			_.each(this.library.models, function(item){
+			this.collection.each(function(item){
 				$(that.el).append(that.template(item.toJSON()));
 			});
 		},

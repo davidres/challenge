@@ -23,7 +23,9 @@
 		},
 
 		libraryView : function () {
-			new APP.LibraryView;
+			new APP.LibraryView({
+				collection : APP.selectedMovies
+			});
 		}
 	});
 

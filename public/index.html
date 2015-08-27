@@ -37,8 +37,8 @@
 			<input id="inputSearch" type="text" placeholder="Search Movie"/>
 			<input id="search" type="submit"  value="Search Movie"/>
 		</div>
-		<ul class="searchResults">
-		</ul>
+		<section class="searchResults">
+		</section>
 	</script>
 
 	<!-- Movie library Template -->
@@ -54,14 +54,14 @@
 
 	<!-- Movie Item Template -->
 	<script id="item-movie-tpl" type="text/x-handlebars-template">
-		<li class="itemMovie">
+		<article class="itemMovie">
 			<h1>{{title}}</h1>
 			<img src="{{posterPath}}" alt="Poster of {{title}}">
 			<ul class="lt-opts">
 				<li><span class="addMovie">ADD</span></li>
 				<li><span class="viewCard">VIEW CARD</span></li>
 			</ul>
-		</li>
+		</article>
 	</script>
 
 	<!-- Movie Card Template -->
